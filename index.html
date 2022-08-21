@@ -6,12 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhaka Naka Production</title>
+    <!------ google font ------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
     <!------ tailwind cdn ------->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!------- tailwind config ------>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yellow: "#FECC02",
+                        offBlack: "#131313",
+                        darkGray: "#4E4E4E",
+                    },
+                    fontFamily: {
+                        bebas: ['Bebas Neue', "cursive"],
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <h1 class="text-3xl">Jhaka Naka Production</h1>
+    <!------- header --------->
+    <header class="w-full h-28  flex justify-center absolute bg-white">
+        <nav class="flex w-4/5 h-full  justify-between items-center font-bebas">
+            <h1 class="text-4xl">Jhaka Naka Production</h1>
+            <ul class="flex gap-x-5 hidden md:flex">
+                <li class="text-xl">About Us</li>
+                <li class="text-xl">Our Movies</li>
+                <li class="text-xl">Services</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------ main ---------->
+    <main>
+        <section class="h-screen  bg-[url('./images/banner.jpg')] bg-cover flex items-center text-white">
+            <div class="w-2/4 mx-10 font-bebas">
+                <p>Movie production studio</p>
+                <h1 class="text-7xl">Films made to</h1>
+                <h1 class="text-7xl text-yellow">Perfection</h1>
+                <p class="font-montserrat mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum
+                    voluptates dolore repellendus
+                    neque expedita dicta eius odio earum modi, quasi doloribus cupiditate repellat obcaecati officiis
+                    facere quis possimus reprehenderit.
+                </p>
+                <button
+                    class="border-2 mt-8 px-5 py-2 text-xl hover:bg-yellow hover:text-black hover:border-yellow transition-all">
+                    Discover more
+                </button>
+            </div>
+        </section>
+    </main>
+
+
 </body>
 
 </html>
